@@ -17,7 +17,7 @@ def shp2kml(gdf):
   for i,r in gdf.iterrows():
       dnames = [str(x) for x in r.index if x!='geometry']
       dvalues = [str(y) for x,y in zip(r.index,r) if x!='geometry']
-      print(dvalues)
+      #print(dvalues)
       px = kml.newmultigeometry(name="|".join(dvalues))
       px.extendeddata.schemadata.schemaurl = schema.name
 
